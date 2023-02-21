@@ -14,7 +14,8 @@ to be used with inputs produced by
 [ecdsa-dump-ethereum](https://github.com/kudelskisecurity/ecdsa-dump-ethereum) and
 [ecdsa-dump-tls](https://github.com/kudelskisecurity/ecdsa-dump-tls)
 respectively.
-Note that the dump files must have been sorted by public key, and then by timestamp so that the attack works.
+Note that the dump files must have been grouped by public key, and then, within each group, sorted by timestamp so that
+the attack works. This is explained in detail further below.
 
 In the `original-attack` folder, we provide the original (easy to read) proof-of-concept of the attack.
 The one that was later used in production is the `recurrence_nonce` attack.
