@@ -182,7 +182,7 @@ options:
   --no-sliding-window   Do not use a sliding window.Only use the first N signatures of each pubkey and discard the rest.Note that this will run faster but some vulnerable signatures may remain undetected
 ```
 
-## Special Thanks
+# Special Thanks
 
 Special thanks to my colleague Marco Macchetti for the original proof-of-concept code in the `original-attack`
 directory, for coming up with this idea and for his feedback.
