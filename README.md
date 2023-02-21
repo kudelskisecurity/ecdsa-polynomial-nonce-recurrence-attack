@@ -2,7 +2,6 @@
 
 [![Sagemath 9.6+](https://img.shields.io/badge/sagemath-9.6+-blue.svg)](https://www.sagemath.org/index.html) [![License: GPL v3](https://img.shields.io/badge/license-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
-
 This is a multithreaded implementation of the polynomial nonce recurrence attack on ECDSA.
 
 # What's in this repository?
@@ -10,9 +9,9 @@ This is a multithreaded implementation of the polynomial nonce recurrence attack
 In this repository, you will find the following.
 
 In the `attacks` directory: multithreaded implementation of the attack for Bitcoin, Ethereum and TLS,
-to be used with inputs produced by 
+to be used with inputs produced by
 [ecdsa-dump-bitcoin](https://github.com/kudelskisecurity/ecdsa-dump-bitcoin),
-[ecdsa-dump-ethereum](https://github.com/kudelskisecurity/ecdsa-dump-ethereum) and 
+[ecdsa-dump-ethereum](https://github.com/kudelskisecurity/ecdsa-dump-ethereum) and
 [ecdsa-dump-tls](https://github.com/kudelskisecurity/ecdsa-dump-tls)
 respectively.
 Note that the dump files must have been sorted by public key, and then by timestamp so that the attack works.
@@ -160,7 +159,6 @@ Where:
 * `k1` to `kN` are the recovered ECDSA nonces for each signature in the window where the attack worked
 * The other values' names are self-explanatory
 
-
 ## Show help
 
 To display the full help with all the options available, pass `--help` or `-h`:
@@ -182,6 +180,11 @@ options:
                         Maximum number of futures to process in a batch. Increase this number if more cores are available.
   --no-sliding-window   Do not use a sliding window.Only use the first N signatures of each pubkey and discard the rest.Note that this will run faster but some vulnerable signatures may remain undetected
 ```
+
+## Special Thanks
+
+Special thanks to my colleague Marco Macchetti for the original proof-of-concept code in the `original-attack`
+directory, for coming up with this idea and for his feedback.
 
 # License and Copyright
 
