@@ -68,13 +68,13 @@ sort bitcoin-input.csv --parallel=16 -T /path/to/tmp/ --field-separator ';' --bu
 Finally, run the attack on the sorted file:
 
 ```
-./attacks/ecdsa_bitcoin_attack.py -i sorted-input.csv -o bitcoin-attack-results.csv
+./attacks/ecdsa_bitcoin_attack.py -i sorted-bitcoin-input.csv -o bitcoin-attack-results.csv
 ```
 
 The output file will contain, on each line (assuming N=4):
 
 ```
-d;pubkey;first_txid;batch_size;pubkey_address;r1;r2;r3;r4;s1;s2;s3;s4;hash1;hash2;hash3;hash4;k1;k2;k3;k4;block_time1;block_time2;block_time3;block_time4"
+d;pubkey;first_txid;batch_size;pubkey_address;r1;r2;r3;r4;s1;s2;s3;s4;hash1;hash2;hash3;hash4;k1;k2;k3;k4;block_time1;block_time2;block_time3;block_time4
 ```
 
 Where:
@@ -111,7 +111,7 @@ Finally, run the attack on the sorted file:
 The output file will contain, on each line:
 
 ```
-d;pubkey;first_txid;batch_size;pubkey_address;r1;r2;r3;r4;s1;s2;s3;s4;hash1;hash2;hash3;hash4;k1;k2;k3;k4;block_time1;block_time2;block_time3;block_time4"
+d;pubkey;first_txid;batch_size;pubkey_address;r1;r2;r3;r4;s1;s2;s3;s4;hash1;hash2;hash3;hash4;k1;k2;k3;k4;block_time1;block_time2;block_time3;block_time4
 ```
 
 Where:
