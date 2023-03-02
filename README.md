@@ -1,8 +1,8 @@
-# ECDSA polynomial nonce recurrence attack
+# Polynonce: ECDSA Attack
 
 [![Sagemath 9.6+](https://img.shields.io/badge/sagemath-9.6+-blue.svg)](https://www.sagemath.org/index.html) [![License: GPL v3](https://img.shields.io/badge/license-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
-This is a multithreaded implementation of the polynomial nonce recurrence attack on ECDSA.
+This is a multithreaded implementation of Polynonce, the polynomial nonce recurrence attack on ECDSA.
 
 # What's in this repository?
 
