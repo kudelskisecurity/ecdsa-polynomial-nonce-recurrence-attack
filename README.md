@@ -8,7 +8,7 @@ This is a multithreaded implementation of Polynonce, the polynomial nonce recurr
 
 In this repository, you will find the following.
 
-In the `attacks` directory: multithreaded implementation of the attack for Bitcoin, Ethereum and TLS,
+In the `attacks` directory: multithreaded implementation of the attacks for Bitcoin, Ethereum and TLS,
 to be used with inputs produced by
 [ecdsa-dump-bitcoin](https://github.com/kudelskisecurity/ecdsa-dump-bitcoin),
 [ecdsa-dump-ethereum](https://github.com/kudelskisecurity/ecdsa-dump-ethereum) and
@@ -19,6 +19,8 @@ the attack works. This is explained in detail further below.
 
 In the `original-attack` folder, we provide the original (easy to read) proof-of-concept of the attack.
 The one that was later used in production is the `recurrence_nonce` attack.
+
+In the `results` folder, we provide the results we obtained for the Half-Half attack.
 
 # Requirements
 
@@ -84,6 +86,22 @@ Where:
 * `s1` to `sN` are the ECDSA signature `s` values for each signature in the window where the attack worked
 * `k1` to `kN` are the recovered ECDSA nonces for each signature in the window where the attack worked
 * The other values' names are self-explanatory
+
+### Half-Half attack
+
+From the previous dump of transaction, it is also possible to run our implementation of the Half-Half attack (without lattice attack).
+
+```bash
+$ python half_parallel_attack.py  sorted-bitcoin-input.csv -b 500000 -o half_half_results.csv
+```
+
+The output file will contain, on each line:
+
+```
+pubkey;privkey;txid;k1;k2
+```
+
+Where `k1` and `k2` are the two nonces which allowed to recover the private key.
 
 ## Ethereum attack
 
